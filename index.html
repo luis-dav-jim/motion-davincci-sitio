@@ -1,23 +1,364 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-MX">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Motion · Próximamente</title>
-<meta name="robots" content="noindex">
-<style>
-  :root { color-scheme: light dark; }
-  html,body { height:100%; margin:0; }
-  body { display:grid; place-items:center; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background:#0f1115; color:#e8e8ea; }
-  main { text-align:center; padding:16px; }
-  h1 { font-size: clamp(1.8rem, 5vw, 3rem); margin:0 0 .4rem; letter-spacing:-.02em; }
-  p { margin:0; opacity:.7; }
-</style>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>DaVincci Motion · Tu video, como lo verá tu audiencia</title>
+<meta name="description" content="DaVincci Motion es el taller donde revisas el video que producen tus agentes: en el marco de cada red, con su etapa de producción y los cambios pedidos sobre el propio video.">
+<meta name="theme-color" content="#0A0C10">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="comun/marca/favicon-32-color.svg" type="image/svg+xml">
+<link rel="alternate icon" href="comun/marca/favicon.ico" sizes="any">
+<link rel="preload" href="comun/fuentes/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="comun/fuentes/ibm-plex-sans-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="comun/base.css">
+<link rel="stylesheet" href="motion.css">
+<script src="comun/arranque.js"></script>
 </head>
 <body>
-<main>
-  <h1>Motion</h1>
-  <p>Próximamente.</p>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<svg class="solo-lector" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <g id="pl-1"><path d="M50 96Q50 62 80 62Q110 62 110 96Z"/><path d="M66 74l6 9M78 70l6 9M90 72l6 9"/><path d="M42 96h76"/></g>
+    <g id="pl-2"><path d="M50 78h60Q108 106 80 106Q52 106 50 78Z"/><path d="M96 54L82 86"/><path d="M60 88q20 8 40 0"/><path d="M44 106h72"/></g>
+    <g id="pl-3"><path d="M54 104q3-20 26-20t26 20z"/><g transform="rotate(-18 80 68)"><rect x="58" y="62" width="44" height="12" rx="6"/><path d="M48 68h10M102 68h10"/></g><path d="M40 104h80"/></g>
+    <g id="pl-4"><rect x="50" y="54" width="60" height="54" rx="4"/><rect x="58" y="72" width="44" height="26" rx="2"/><path d="M58 63h6M70 63h6M94 63h8"/><path d="M68 90q12-12 24 0"/></g>
+  </defs>
+</svg>
+
+<header class="barra">
+  <div class="cont">
+    <div class="marca">
+      <a href="https://davincci.tech/" aria-label="DaVincci, sitio principal"><img src="comun/marca/lockup-color-oscuro.svg" alt="DaVincci" width="97" height="28"></a>
+      <span class="ruta" aria-hidden="true">/</span>
+      <a class="producto" href="#contenido">Motion</a>
+    </div>
+    <nav class="barra-nav" aria-label="Secciones">
+      <a href="#visor">Vista previa</a>
+      <a href="#cadena">La cadena</a>
+      <a href="#cambio">Pedir cambio</a>
+      <a href="#vistas">Vistas</a>
+      <a href="#limites">Lo que no hace</a>
+    </nav>
+    <div class="barra-fin"><span class="etiqueta">Muy pronto</span></div>
+    <details class="menu">
+      <summary aria-label="Menú">
+        <svg class="tres" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+        <svg class="x" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg>
+      </summary>
+      <nav class="menu-panel" aria-label="Secciones">
+        <a href="#visor">Vista previa</a>
+        <a href="#cadena">La cadena</a>
+        <a href="#cambio">Pedir cambio</a>
+        <a href="#vistas">Vistas</a>
+        <a href="#limites">Lo que no hace</a>
+        <p class="nota"><span class="etiqueta">Muy pronto</span></p>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<main id="contenido">
+  <div class="recorrido" aria-hidden="true"><div><i></i><b></b></div></div>
+
+  <section class="tramo heroe" aria-labelledby="t-heroe">
+    <div class="cont heroe-rejilla">
+      <div class="tramo-cab heroe-cab">
+        <p class="sobre"><span class="nodo" aria-hidden="true"><i class="rombo"></i></span><span class="dato">TikTok · Reels · Shorts · 16:9</span></p>
+        <h1 class="display-1" id="t-heroe">Tu video, como lo verá tu audiencia.</h1>
+        <p class="entrada">Mientras todavía lo estás haciendo: cada video en el marco de su red, con su etapa de producción a la vista.</p>
+        <div class="heroe-botones">
+          <a class="btn primario l" href="#cambio">Pedir un cambio</a>
+          <a class="btn l" href="#cadena">Ver la cadena</a>
+        </div>
+      </div>
+
+      <div class="marco visor rv" id="visor" data-red="tiktok" data-zonas="si">
+        <div class="marco-cab">
+          <span class="dato">Obra de ejemplo · «Pan de masa madre»</span>
+        </div>
+        <div class="visor-barra">
+          <div class="pestanas" role="group" aria-label="Marco de la vista previa" data-elige="red" data-en="#visor">
+            <button type="button" data-valor="tiktok" aria-pressed="true">TikTok</button>
+            <button type="button" data-valor="reels" aria-pressed="false">Reels</button>
+            <button type="button" data-valor="shorts" aria-pressed="false">Shorts</button>
+            <button type="button" data-valor="youtube" aria-pressed="false">16:9</button>
+          </div>
+          <button type="button" class="btn fantasma m conmuta" data-zonas-boton aria-pressed="true"><span class="conmuta-t">Zonas</span></button>
+        </div>
+        <div class="visor-cuerpo">
+          <div class="escenario">
+            <div class="telefono">
+              <div class="cuadro">
+                <svg class="plano" viewBox="0 0 160 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><use href="#pl-2"/></svg>
+                <p class="subtitulo">Mezcla harina, agua y sal.</p>
+                <span class="zona z-arriba" aria-hidden="true"></span>
+                <span class="zona z-abajo" aria-hidden="true"></span>
+                <span class="zona z-lado" aria-hidden="true"></span>
+                <span class="zona z-margen" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+          <ol class="cadena-v" aria-label="Etapas de la obra">
+            <li class="hecha"><i aria-hidden="true"></i>idea</li>
+            <li class="hecha"><i aria-hidden="true"></i>guion</li>
+            <li class="hecha"><i aria-hidden="true"></i>voz</li>
+            <li class="hecha"><i aria-hidden="true"></i>tomas</li>
+            <li class="hecha"><i aria-hidden="true"></i>render</li>
+            <li class="actual" aria-current="step"><i aria-hidden="true"></i>revisión <span class="micro">ahora</span></li>
+            <li><i aria-hidden="true"></i>aprobado</li>
+            <li><i aria-hidden="true"></i>programado</li>
+            <li><i aria-hidden="true"></i>publicado</li>
+          </ol>
+        </div>
+        <p class="visor-pie cuerpo-s" data-nota-red aria-live="polite">Zonas de TikTok en Motion: 7 % arriba, 27 % abajo y la columna derecha.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tramo escena" id="cadena" aria-labelledby="t-cadena">
+    <div class="cont">
+      <header class="tramo-cab">
+        <p class="sobre"><span class="nodo" aria-hidden="true"><i class="rombo"></i></span><span class="dato">9 etapas</span></p>
+        <h2 class="display-2" id="t-cadena">De idea a publicado.</h2>
+        <p class="entrada">La cadena de producción sale de los archivos de cada obra. Nadie mantiene un tablero a mano.</p>
+      </header>
+    </div>
+    <div class="escena-alto" data-progreso="fijo:9" data-cadena data-paso="9">
+      <div class="escena-fija">
+        <div class="cont cadena-rejilla">
+          <div class="cadena-arte" aria-hidden="true">
+            <div class="telefono">
+              <div class="cuadro">
+                <div class="capa c1"><p class="nota-idea">Pan con cuatro ingredientes, en 24 segundos.</p><span class="chip dato">idea</span></div>
+                <div class="capa c2"><ol class="guion"><li>Hoy: pan con cuatro ingredientes.</li><li>Mezcla harina, agua y sal.</li><li>Amasa diez minutos.</li><li>Al horno hasta que dore.</li></ol><span class="chip dato">guion · 4 líneas</span></div>
+                <div class="capa c3"><svg class="onda" viewBox="0 0 120 40" aria-hidden="true" focusable="false"><path d="M4 20v0M10 14v12M16 8v24M22 16v8M28 11v18M34 4v32M40 13v14M46 18v4M52 9v22M58 15v10M64 6v28M70 12v16M76 17v6M82 10v20M88 5v30M94 14v12M100 9v22M106 16v8M112 12v16M118 19v2"/></svg><span class="chip dato">voz · 0:24</span></div>
+                <div class="capa c4"><div class="tomas"><svg class="plano" viewBox="0 0 160 160" preserveAspectRatio="xMidYMid slice"><use href="#pl-1"/></svg><svg class="plano" viewBox="0 0 160 160" preserveAspectRatio="xMidYMid slice"><use href="#pl-2"/></svg><svg class="plano" viewBox="0 0 160 160" preserveAspectRatio="xMidYMid slice"><use href="#pl-3"/></svg><svg class="plano" viewBox="0 0 160 160" preserveAspectRatio="xMidYMid slice"><use href="#pl-4"/></svg></div><span class="chip dato">tomas · 4 de 4</span></div>
+                <div class="capa c5"><svg class="plano" viewBox="0 0 160 160" preserveAspectRatio="xMidYMid slice"><use href="#pl-1"/></svg><p class="subtitulo">Hoy: pan con cuatro ingredientes.</p><span class="chip dato">render · vista previa</span></div>
+                <div class="capa c6"><svg class="plano" viewBox="0 0 160 160" preserveAspectRatio="xMidYMid slice"><use href="#pl-3"/></svg><p class="subtitulo">Amasa diez minutos.</p><span class="senal"></span><span class="chip dato firma">0:14 · sube el texto</span></div>
+                <div class="capa c7"><svg class="plano" viewBox="0 0 160 160" preserveAspectRatio="xMidYMid slice"><use href="#pl-4"/></svg><p class="subtitulo">Al horno hasta que dore.</p><span class="chip dato"><svg class="ico" viewBox="0 0 16 16"><path d="M3 8.5l3.2 3.2L13 5"/></svg>aprobado</span></div>
+                <div class="capa c8"><svg class="plano tenue" viewBox="0 0 160 160" preserveAspectRatio="xMidYMid slice"><use href="#pl-1"/></svg><span class="chip dato">programado · jue 18:00</span></div>
+                <div class="capa c9"><svg class="plano" viewBox="0 0 160 160" preserveAspectRatio="xMidYMid slice"><use href="#pl-1"/></svg><p class="subtitulo">Hoy: pan con cuatro ingredientes.</p><span class="chip dato"><svg class="ico" viewBox="0 0 16 16"><path d="M3 8.5l3.2 3.2L13 5"/></svg>publicado</span></div>
+              </div>
+            </div>
+            <div class="tira"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <ol class="etapas">
+            <li><span class="etapa-n"><i aria-hidden="true"></i>idea</span><p class="cuerpo">Empieza como una nota en la carpeta de la obra. Motion la lee de ahí.</p></li>
+            <li><span class="etapa-n"><i aria-hidden="true"></i>guion</span><p class="cuerpo">Cuando el guion existe, la etapa se marca sola.</p></li>
+            <li><span class="etapa-n"><i aria-hidden="true"></i>voz</span><p class="cuerpo">La narración ya está: ves cuánto dura antes de montar nada.</p></li>
+            <li><span class="etapa-n"><i aria-hidden="true"></i>tomas</span><p class="cuerpo">Cada plano tiene su toma. Las que faltan esperan en la fila.</p></li>
+            <li><span class="etapa-n"><i aria-hidden="true"></i>render</span><p class="cuerpo">El primer corte completo aparece en el teléfono, en su marco.</p></li>
+            <li><span class="etapa-n"><i aria-hidden="true"></i>revisión</span><p class="cuerpo">Lo miras como lo verá tu audiencia y marcas lo que cambiarías.</p></li>
+            <li><span class="etapa-n"><i aria-hidden="true"></i>aprobado</span><p class="cuerpo">Tú das el visto bueno. Sin eso, la obra no avanza.</p></li>
+            <li><span class="etapa-n"><i aria-hidden="true"></i>programado</span><p class="cuerpo">Programar ocurre fuera de Motion. Aquí solo se refleja.</p></li>
+            <li class="activa"><span class="etapa-n"><i aria-hidden="true"></i>publicado</span><p class="cuerpo">Ya está al aire y la obra cierra su cadena.</p></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tramo" id="cambio" aria-labelledby="t-cambio">
+    <div class="cont">
+      <header class="tramo-cab rv">
+        <p class="sobre"><span class="nodo" aria-hidden="true"><i class="rombo"></i></span><span class="dato">Revisión</span></p>
+        <h2 class="display-2" id="t-cambio">El cambio se pide sobre el video.</h2>
+        <p class="entrada">Toca el cuadro donde algo no te convence. Queda una marca con su segundo, escribes el cambio y el orquestador lo recibe con el plano exacto.</p>
+      </header>
+
+      <div class="marco editor rv" data-editor>
+        <div class="marco-cab">
+          <span class="dato">Pan de masa madre · 0:24<span class="solo-ancho"> · 4 planos</span></span>
+          <span class="fin"><button type="button" class="btn fantasma m" data-limpiar>Reiniciar</button></span>
+        </div>
+        <div class="editor-cuerpo">
+          <div class="editor-video">
+            <div class="telefono">
+              <button type="button" class="cuadro cuadro-boton" data-cuadro aria-label="Cuadro del video. Actívalo para dejar una marca en este segundo.">
+                <svg class="plano capa-plano activo" viewBox="0 0 160 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><use href="#pl-1"/></svg>
+                <svg class="plano capa-plano" viewBox="0 0 160 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><use href="#pl-2"/></svg>
+                <svg class="plano capa-plano" viewBox="0 0 160 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><use href="#pl-3"/></svg>
+                <svg class="plano capa-plano" viewBox="0 0 160 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><use href="#pl-4"/></svg>
+                <span class="subtitulo" data-subtitulo>Hoy: pan con cuatro ingredientes.</span>
+                <span class="marcas" data-marcas aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+
+          <div class="editor-panel">
+            <div class="pedir" data-pedir role="group" aria-label="Pedir un cambio">
+              <p class="dato" data-contexto>0:00 · plano 1 · título</p>
+              <label class="cuerpo-s" for="cambio-texto">Qué cambiarías en este segundo</label>
+              <div class="pedir-fila">
+                <input id="cambio-texto" type="text" autocomplete="off" maxlength="80" enterkeyhint="send" aria-describedby="cambio-ayuda">
+                <button type="button" class="btn primario" data-envia>Pedir cambio</button>
+              </div>
+              <p class="cuerpo-s ayuda" id="cambio-ayuda" data-ayuda aria-live="polite">Toca el cuadro para elegir el segundo, o mueve el cabezal.</p>
+            </div>
+            <div class="pedidos">
+              <p class="micro">Cambios pedidos</p>
+              <ol data-pedidos></ol>
+              <p class="cuerpo-s t3" data-sin-pedidos>Ninguno todavía.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="transporte">
+          <button type="button" class="btn m reproducir" data-reproducir aria-label="Reproducir">
+            <svg class="ico i-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.5v9l7.5-4.5z"/></svg>
+            <svg class="ico i-pausa" viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 3.5v9M10.5 3.5v9"/></svg>
+          </button>
+          <span class="dato reloj" data-reloj>0:00 / 0:24</span>
+        </div>
+        <div class="tiempo" data-tiempo role="slider" tabindex="0" aria-label="Cabezal de la línea de tiempo" aria-valuemin="0" aria-valuemax="24" aria-valuenow="0" aria-valuetext="0:00, plano 1">
+          <div class="pista"><span class="micro">Planos</span><div class="bloques"><i>título</i><i>mezclar</i><i>amasar</i><i>horno</i></div></div>
+          <div class="pista"><span class="micro">Voz</span><div class="bloques uno"><i></i></div></div>
+          <div class="pista"><span class="micro">Tomas</span><div class="bloques"><i></i><i></i><i></i><i></i></div></div>
+          <div class="pista"><span class="micro">Música</span><div class="bloques uno fina"><i></i></div></div>
+          <div class="carril" data-carril><span class="cabezal" data-cabezal></span><span class="ticks" data-ticks></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tramo" id="vistas" aria-labelledby="t-vistas">
+    <div class="cont">
+      <header class="tramo-cab rv">
+        <p class="sobre"><span class="nodo" aria-hidden="true"><i class="rombo"></i></span><span class="dato">Biblioteca y planeación</span></p>
+        <h2 class="display-2" id="t-vistas">Todo tu contenido, en tres vistas.</h2>
+      </header>
+
+      <div class="demos">
+        <article class="demo d-catalogo rv">
+          <div class="demo-texto">
+            <h3 class="titulo-1">El catálogo dice en qué va cada obra.</h3>
+            <p class="cuerpo-s">Una fila por obra y nueve segmentos por fila. La etapa sale de lo que ya hay en su carpeta.</p>
+          </div>
+          <div class="marco catalogo" data-catalogo data-grupo="todo">
+            <div class="marco-cab">
+              <div class="pestanas" role="group" aria-label="Filtrar el catálogo" data-elige="grupo" data-en="[data-catalogo]">
+                <button type="button" data-valor="todo" aria-pressed="true">Todo <span class="cuenta">5</span></button>
+                <button type="button" data-valor="produccion" aria-pressed="false">En producción <span class="cuenta">2</span></button>
+                <button type="button" data-valor="revisar" aria-pressed="false">Por revisar <span class="cuenta">1</span></button>
+                <button type="button" data-valor="listas" aria-pressed="false">Listas <span class="cuenta">2</span></button>
+              </div>
+            </div>
+            <table class="obras">
+              <thead><tr><th scope="col" class="micro">Nº</th><th scope="col" class="micro">Título</th><th scope="col" class="micro">Etapa</th><th scope="col" class="micro">Cadena</th><th scope="col" class="micro">Duración</th></tr></thead>
+              <tbody>
+                <tr data-g="revisar"><td class="dato">12</td><th scope="row">Pan de masa madre</th><td><span class="etiqueta"><span class="punto aviso"></span>revisión</span></td><td><span class="cadena e6" role="img" aria-label="6 de 9 etapas"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></td><td class="dato">0:24</td></tr>
+                <tr data-g="produccion"><td class="dato">13</td><th scope="row">Nudos para acampar</th><td><span class="etiqueta">tomas</span></td><td><span class="cadena e4" role="img" aria-label="4 de 9 etapas"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></td><td class="dato">0:31</td></tr>
+                <tr data-g="produccion"><td class="dato">14</td><th scope="row">Huerto en maceta</th><td><span class="etiqueta">guion</span></td><td><span class="cadena e2" role="img" aria-label="2 de 9 etapas"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></td><td class="dato">sin render</td></tr>
+                <tr data-g="listas"><td class="dato">11</td><th scope="row">Café en prensa</th><td><span class="etiqueta">aprobado</span></td><td><span class="cadena e7" role="img" aria-label="7 de 9 etapas"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></td><td class="dato">0:28</td></tr>
+                <tr data-g="listas"><td class="dato">10</td><th scope="row">Afilar un cuchillo</th><td><span class="etiqueta">publicado</span></td><td><span class="cadena e9" role="img" aria-label="9 de 9 etapas"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></td><td class="dato">0:42</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="demo d-calendario rv">
+          <div class="demo-texto">
+            <h3 class="titulo-1">El calendario cuida tu cadencia.</h3>
+            <p class="cuerpo-s">Planeas la semana con tu propia regla. Motion te avisa si un día la rompe; publicar sigue siendo un paso tuyo.</p>
+          </div>
+          <div class="marco calendario" data-calendario>
+            <div class="marco-cab"><span class="dato">Semana de ejemplo · regla: máximo 2 al día</span></div>
+            <div class="porplanear">
+              <p class="micro">Listas para planear</p>
+              <div class="fichas" data-fichas>
+                <button type="button" class="ficha" data-pieza="Café en prensa" aria-pressed="false">Café en prensa</button>
+                <button type="button" class="ficha" data-pieza="Pan de masa madre" aria-pressed="false">Pan de masa madre</button>
+              </div>
+            </div>
+            <div class="semana" data-semana>
+              <button type="button" class="dia" data-dia="lunes"><span class="micro">lun</span><span class="huecos"><i class="lleno"></i><i></i></span></button>
+              <button type="button" class="dia" data-dia="martes"><span class="micro">mar</span><span class="huecos"><i></i><i></i></span></button>
+              <button type="button" class="dia" data-dia="miércoles"><span class="micro">mié</span><span class="huecos"><i class="lleno"></i><i class="lleno"></i></span></button>
+              <button type="button" class="dia" data-dia="jueves"><span class="micro">jue</span><span class="huecos"><i></i><i></i></span></button>
+              <button type="button" class="dia" data-dia="viernes"><span class="micro">vie</span><span class="huecos"><i class="lleno"></i><i></i></span></button>
+              <button type="button" class="dia" data-dia="sábado"><span class="micro">sáb</span><span class="huecos"><i></i><i></i></span></button>
+              <button type="button" class="dia" data-dia="domingo"><span class="micro">dom</span><span class="huecos"><i></i><i></i></span></button>
+            </div>
+            <p class="cal-nota cuerpo-s" data-cal-nota aria-live="polite">Elige una obra lista y después un día.</p>
+          </div>
+        </article>
+
+        <article class="demo d-fila rv">
+          <div class="demo-texto">
+            <h3 class="titulo-1">La fila dice qué se está generando.</h3>
+            <p class="cuerpo-s">Las tomas que faltan esperan su turno. Ves cuál va, cuál sigue y cuál falló.</p>
+          </div>
+          <div class="marco fila" data-fila>
+            <div class="marco-cab">
+              <span class="dato">Fila de tomas · Nudos para acampar</span>
+              <span class="fin"><button type="button" class="btn fantasma m" data-avanzar>Avanzar</button></span>
+            </div>
+            <ul class="trabajos" data-trabajos>
+              <li data-estado="lista"><span class="t-nombre">Plano 1 · cuerda</span><span class="t-estado">lista</span></li>
+              <li data-estado="generando"><span class="t-nombre">Plano 2 · lazo</span><span class="t-estado">generando</span></li>
+              <li data-estado="fila"><span class="t-nombre">Plano 3 · apretar</span><span class="t-estado">en fila</span></li>
+              <li data-estado="fallo"><span class="t-nombre">Plano 4 · prueba</span><span class="t-estado">falló</span></li>
+            </ul>
+            <p class="fila-nota cuerpo-s" data-fila-nota aria-live="polite">Una toma se genera a la vez. «Avanzar» mueve esta demostración un paso.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="tramo" id="limites" aria-labelledby="t-limites">
+    <div class="cont">
+      <header class="tramo-cab rv">
+        <p class="sobre"><span class="nodo" aria-hidden="true"><i class="rombo"></i></span><span class="dato">Límites</span></p>
+        <h2 class="display-2" id="t-limites">Lo que Motion no hace.</h2>
+        <p class="entrada">Motion mira y pide. Lo demás sigue en tus manos y en tu disco.</p>
+      </header>
+      <dl class="hechos">
+        <div class="rv"><dt class="titulo-3">No publica ni programa.</dt><dd class="cuerpo">Solo lee. Programar y publicar siguen siendo un paso aparte, con tu visto bueno.</dd></div>
+        <div class="rv"><dt class="titulo-3">No sube nada.</dt><dd class="cuerpo">Ni a un servidor ni a la web. Tu cara, tu voz y tus tomas se quedan en tu disco.</dd></div>
+        <div class="rv"><dt class="titulo-3">No transcodifica.</dt><dd class="cuerpo">Usa las vistas previas que ya existen. Lo pesado va por la fila.</dd></div>
+        <div class="rv"><dt class="titulo-3">No reemplaza a OASIS.</dt><dd class="cuerpo">Pide; no ejecuta. Los agentes siguen viviendo en el pizarrón.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="cierre" aria-labelledby="t-cierre">
+    <div class="cont">
+      <div class="tramo-cab rv">
+        <p class="sobre"><span class="nodo" aria-hidden="true"><i class="rombo"></i></span><span class="etiqueta">Muy pronto</span></p>
+        <h2 class="display-2" id="t-cierre">Míralo antes de publicarlo.</h2>
+        <p class="entrada">DaVincci Motion todavía no está abierto al público.</p>
+        <div class="botones"><a class="btn primario l" href="https://davincci.tech/">Conocer DaVincci</a></div>
+      </div>
+    </div>
+  </section>
 </main>
+
+<footer class="pie">
+  <div class="cont">
+    <div class="pie-marca">
+      <a href="https://davincci.tech/" aria-label="DaVincci"><img src="comun/marca/lockup-color-oscuro.svg" alt="DaVincci" width="97" height="28" loading="lazy"></a>
+      <span class="cuerpo-s">Desarrollo de tecnología</span>
+    </div>
+    <nav class="pie-familia" aria-label="La familia DaVincci">
+      <a href="https://davincci.tech/">DaVincci</a>
+      <span>Academy</span>
+      <a href="https://oasis.davincci.tech/">OASIS</a>
+      <a href="#contenido" aria-current="page">Motion</a>
+      <span>Proyecto Da Vinci</span>
+    </nav>
+    <div class="pie-legal">
+      <p class="micro">TikTok, Reels, Shorts y YouTube son marcas de sus dueños. DaVincci no está afiliado a ellos ni cuenta con su patrocinio.</p>
+      <p class="micro">© 2026 DaVincci</p>
+    </div>
+  </div>
+</footer>
+
+<script src="comun/base.js" defer></script>
+<script src="motion.js" defer></script>
 </body>
 </html>
